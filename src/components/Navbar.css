@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+.navbar{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 92%;
+    max-width: 1150px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+border-radius: 50px;
+    padding: 0 40px;
+    width: 37vw;
+    z-index: 1000;
+    background-color: rgba(138, 138, 138, 0.059);
+    backdrop-filter: blur(6px);
+    box-shadow: rgba(0, 0, 0, 0.516) 0px 1px 15px;
+    transition: all 0.4s ease;
+}
+
+/* subtle hover depth */
+
+
+/* NAV LINKS */
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+/* LIST ITEMS */
+
+.navbar ul li{
+    list-style: none;
+    position: relative;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+}
+
+/* LINKS */
+
+.navbar ul li a{
+    position: relative;
+
+    text-decoration: none;
+
+    font-family: "Rubik", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+
+    color: #d9dee7;
+
+    letter-spacing: 0.5px;
+
+    transition: all 0.3s ease;
+}
+
+/* UNDERLINE ANIMATION */
+
+.navbar ul li a::after{
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+    height: 1px;
+
+    background: #d6a8ff;
+
+    transition: width 0.35s ease;
+}
+
+/* HOVER EFFECT */
+
+.navbar ul li:hover{
+    transform: translateY(-2px);
+}
+
+.navbar ul li:hover a{
+    color: white;
+}
+
+.navbar ul li:hover a::after{
+    width: 100%;
+}
+
+/* OPTIONAL ACTIVE STYLE */
+
+.navbar ul li.active a{
+    color: white;
+}
+
+.navbar ul li.active a::after{
+    width: 100%;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .navbar{
+        width: 95%;
+        height: auto;
+
+        padding: 18px 20px;
+    }
+
+    .navbar ul{
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar ul li a{
+        font-size: 0.82rem;
+    }
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        top: 10px;
+        border-radius: 18px;
+    }
+
+    .navbar ul{
+        gap: 16px;
+    }
+
+    .navbar ul li a{
+        font-size: 0.75rem;
+    }
+}
