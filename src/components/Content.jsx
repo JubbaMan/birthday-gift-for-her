@@ -7,7 +7,7 @@ const wishesData = [
   { name: "Lamisa", message: "I wish from the core of my heart that you will success in you life, get everything what you want and God will bless you heaven with abundance. Happay birthday my dear friend." },
   { name: "Vaiya", message: "Happy birthday to my pretty little sister. You were the one who brought colours to my black and white silouhet and however you take it, I love you a lottttttttttttttttttttttttttttttttttt." },
   { name: "Newborn", message: "Arek bochor bura hoye jaoar onek shubeccha." },
-  { name: "Niyamul", message: "Funny how time passes without asking anyone first." },
+  { name: "Niyamul", message: "hope you get to round the sun again." },
   { name: "Anno", message: "May you have the courage to become who you truly are!! Rather than who the world expects you to be~  Happiest Birthday Sana Di🖤!!" },
   { name: "Arisha", message: "Happiest birthday apuu, dont stop shining and always be the same swagata apuu🤍." },
   { name: "Archi", message: "Happy birthdayyy swagata always be happy and shine bright..enjoy." },
@@ -27,9 +27,9 @@ const wishesData = [
 
 const Content = () => {
   const scrollRef = useRef(null);
-  
+
   // REMOVED: intervalRef, isUserInteracting, userInteractTimeoutRef
-  
+
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
   const audioRef = useRef(null);
@@ -164,7 +164,7 @@ const Content = () => {
             <br />
             A small collection of memories, effort and moments.
           </p>
-          
+
           <div className="hero-music-player">
             <audio
               ref={audioRef}
@@ -210,7 +210,7 @@ const Content = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="hero-right">
           <div className="image-glow" aria-hidden="true" />
           <img src="/her.png" alt="Her portrait" className="hero-image" />
@@ -316,22 +316,223 @@ const Content = () => {
       </section>
 
       {/* GAME SECTION */}
-      <section id="game" className="game-section">
-        <div className="game-panel">
-          <p className="game-tag">THE GAME!!</p>
-          <h2 className="game-title">Our Way Through</h2>
-          <p className="game-desc">
-            A gift only your kiddo can give you...
-          </p>
-          <div className="game-info">
-            <div><span>Genre</span><p>Story / Journey</p></div>
-            <div><span>Length</span><p>Short Experience</p></div>
-            <div><span>Made With</span><p>Way Too Much Effort</p></div>
-          </div>
-          <button className="download-btn" aria-label="Download game">
-            Coming Soon...
-          </button>
+      {/* GAME SECTION */}
+      <section id='game' className="game-section">
+
+        <div className="section-heading">
+          <p>03</p>
+          <h2>The Game</h2>
         </div>
+
+        <div className="game-container">
+
+          <div className="game-header">
+            <p className="game-tag">INTERACTIVE STORY</p>
+
+            <h2 className="game-title">
+              Our Way Through
+            </h2>
+
+            <p className="game-subtitle">
+              A gift only your kiddo can give you.
+            </p>
+
+            <p className="game-description">
+              A small story built from memories, van rides,
+              exams, bridges, random conversations,
+              pieces of paper and everything that somehow
+              survived the passing of time.
+              <br /><br />
+              This isn't really a game about winning.
+              It's a journey through moments that were
+              too important to leave behind.
+            </p>
+          </div>
+          <div className="tutorial-box">
+
+            <p className="tutorial-tag">
+              BEFORE YOU START
+            </p>
+
+            <h3>
+              How To Play
+            </h3>
+
+            <div className="tutorial-steps">
+
+              <div className="tutorial-step">
+                <span>01</span>
+                <p>
+                  Read the narrations.
+                  Seriously.
+                  I spent way too much time writing them.
+                </p>
+              </div>
+
+              <div className="tutorial-step">
+                <span>02</span>
+                <p>
+                  Use <b>WASD</b> keys to move around.
+                  Revolutionary gameplay, I know.
+                </p>
+              </div>
+
+              <div className="tutorial-step">
+                <span>03</span>
+                <p>
+                  Look at the quest objective at the top of the screen.
+                  If it says "Go somewhere",
+                  you should probably go there.
+                </p>
+              </div>
+
+              <div className="tutorial-step">
+                <span>04</span>
+                <p>
+                  Walk into narration zones to continue the story.
+                  If nothing is happening,
+                  you're probably walking the wrong way.
+                </p>
+              </div>
+
+              <div className="tutorial-step">
+                <span>05</span>
+                <p>
+                  Press <b>E</b> whenever an interaction appears.
+                  Do not spam E.
+                  This is not Minecraft.
+                </p>
+              </div>
+
+              <div className="tutorial-step">
+                <span>06</span>
+                <p>
+                  There are no enemies.
+                  There is no combat.
+                  There is no way to lose.
+                  Unless you somehow get lost.
+                </p>
+              </div>
+              <div className="tutorial-step">
+                <span>07</span>
+                <p>
+                  And if you do get lost somehow, you can always ask me while playing.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+          <div className="gallery-controls">
+
+            <button
+              className="gallery-btn"
+              onClick={() => {
+                document
+                  .querySelector(".game-gallery")
+                  ?.scrollBy({
+                    left: -600,
+                    behavior: "smooth",
+                  });
+              }}
+            >
+              ←
+            </button>
+
+            <button
+              className="gallery-btn"
+              onClick={() => {
+                document
+                  .querySelector(".game-gallery")
+                  ?.scrollBy({
+                    left: 600,
+                    behavior: "smooth",
+                  });
+              }}
+            >
+              →
+            </button>
+
+          </div>
+          {/* SCREENSHOTS */}
+
+          <div className="game-gallery">
+
+
+
+            <div className="screenshot-card">
+              <img src="/Screenshot 2026-06-20 172403.png" alt="Screenshot 2" />
+
+
+            </div>
+
+            <div className="screenshot-card">
+              <img src="/Screenshot 2026-06-20 172403 (2).png" alt="Screenshot 3" />
+
+
+            </div>
+
+            <div className="screenshot-card">
+              <img src="/Screenshot 2026-06-20 172403 (3).png" alt="Screenshot 4" />
+
+            </div>
+            <div className="screenshot-card">
+              <img src="/Screenshot 2026-06-20 172403 (7).png" alt="Screenshot 1" />
+
+            </div>
+            <div className="screenshot-card">
+              <img src="/Screenshot 2026-06-20 172403 (10).png" alt="Screenshot 1" />
+
+            </div>
+            <div className="screenshot-card">
+              <img src="/Screenshot 2026-06-20 172403 (9).png" alt="Screenshot 1" />
+
+            </div>
+          </div>
+
+          {/* INFO BOXES */}
+
+          <div className="game-info-grid">
+
+            <div className="info-box">
+              <span>Genre</span>
+              <p>Story Adventure</p>
+            </div>
+
+            <div className="info-box">
+              <span>Length</span>
+              <p>Kinda short</p>
+            </div>
+
+            <div className="info-box">
+              <span>Platform</span>
+              <p>Windows</p>
+            </div>
+
+            <div className="info-box">
+              <span>Made With</span>
+              <p>Way Too Much Effort</p>
+            </div>
+
+          </div>
+
+          {/* DOWNLOAD */}
+
+          <div className="game-download">
+            <a
+              href="https://drive.google.com/file/d/1oxoeDt0C6hz-Utc7OVojeuPYKCj3_N_5/view?usp=drive_link"
+              className="download-btn"
+            >
+              Download Game
+            </a>
+
+            <p className="download-note">
+              Version 1.0 • Made specifically for one person.
+            </p>
+          </div>
+
+        </div>
+
       </section>
     </>
   );
